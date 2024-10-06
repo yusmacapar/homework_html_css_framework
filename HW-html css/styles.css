@@ -1,0 +1,685 @@
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #243642;
+    color: #E2F1E7;
+    font-family: sans-serif;
+}
+
+h3 {
+    font-size: 2em;
+    color: #629584;
+}
+
+h1, h2, h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: transparent;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h4 {
+    color: white;
+    font-size: 20px;
+    margin: 20px;
+}
+
+/* Navbar */
+nav {
+    margin-right: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a.active::after, nav ul li a:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #629584;
+    border-radius: 5px;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3 ease;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    margin-left: auto;
+    margin-right: 50px;
+    z-index: 10;
+}
+
+.hamburger span {
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Homepage/Beranda */
+.beranda-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.beranda-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.beranda-text {
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.beranda-text h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.beranda-text h3 {
+    margin: 0;
+    color: white;
+}
+
+/* History/sejarah */
+#sejarah {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 75px;
+    padding: 0 50px 0 50px;
+}
+
+.sejarah-container {
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+}
+
+.sejarah-image {
+    width: 40%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.sejarah-text {
+    padding-left: 75px;
+    margin-top: 40px;
+    flex: 1;
+}
+
+.sejarah-text h2 {
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+/* Destinasi */
+#destinasi {
+    text-align: center;
+    position: relative;
+    padding: 20px 0;
+    margin: 50px 25px 5px 25px;
+    margin-top: 10px;
+}
+
+.destinasi-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.destinasi-container h2 {
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.destinasi-container h3 {
+    margin-top: 50px;
+}
+
+.destinasi-content {
+    display: flex;
+    transition: transform 0.5s ease;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.destinasi-item {
+    flex: 0 0 auto;
+    width: 275px;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: #387478;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.destinasi-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.destinasi-info {
+    padding: 12px 20px;
+    flex-grow: 1;
+}
+
+.destinasi-info h6 {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.destinasi-info p {
+    font-size: 0.9em;
+}
+
+/* Tombol scroll */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 30%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left {
+    top: 60%;
+    left: 10px;
+}
+
+.right {
+    top: 60%;
+    right: 10px;
+}
+
+.scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+/* Button Explore Destinasi */
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.btn a {
+    background-color: #243642;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: backgorund-color 0.3s;
+    font-size: 0.9em;
+}
+
+.btn a:hover {
+    background-color: #387478;
+}
+
+/* Button Explore Sejarah */
+#sejarah .btn {
+    justify-content: left;
+}
+
+#sejarah .btn a {
+    margin-top: 0px;
+    background-color: #E2F1E7;
+    color: #243642;
+}
+
+#sejarah .btn a:hover {
+    background-color: #387478;
+    color: white;
+}
+
+/* Galeri */
+#galeri {
+    text-align: center;
+    position: relative;
+    margin: 0 25px 0 25px;
+}
+
+.galeri-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.galeri-container h3 {
+    padding-top: 70px;
+    margin: 5px 0 5px 0;
+}
+
+/* Grid layout untuk galeri */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.galeri-grid img {
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+}
+
+/* Kontak */
+#kontak {
+    background-color: #E2F1E7;
+    padding: 20px;
+    margin-top: 100px;
+    color:#243642;
+}
+
+.kontak-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Kontak info */
+.kontak-info {
+    text-align: center;
+    margin: 10px 0;
+    flex: 1;
+}
+
+.kontak-info h4 {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.kontak-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.kontak-info ul li {
+    margin: 5px 0;
+}
+
+.kontak-info ul li a {
+    text-decoration: none;
+    color:#243642;
+}
+
+.kontak-info ul li a:hover {
+    color:#629584 !important;
+}
+
+/* Sosial media */
+.social-media {
+    flex: 1;
+    margin: 10px 30px;
+}
+
+.social-media h4 {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-media ul li {
+    list-style: none;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+}
+
+.social-media ul li a i {
+    color:#E2F1E7;
+    background-color:#387478;
+    padding: 20px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-media ul li a i:hover {
+    background-color: transparent;
+    color: #243642;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* responsif untuk layar sedang */
+@media (max-width: 1024px) {
+    /* responsif section sejarah */
+    #sejarah {
+        margin-top: 50px;
+        padding: 20px;
+    }
+
+    .sejarah-image {
+        height: 650px;
+    }
+
+    .sejarah-text {
+        padding-left: 40px;
+        margin-top: 20px;
+    }
+
+    /* responsif section galeri */
+    .galeri-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .galeri-grid img:nth-last-child(2) {
+        grid-column: -3 / -4; 
+    }
+}
+
+/* responsif untuk layar tablet */
+@media (max-width: 815px){
+    body {
+        background-color:whitesmoke;
+    }
+
+    /* responsif header */
+    header {
+        padding-bottom: 1px;
+        background-color: transparent 5;
+    }
+
+    header h4 {
+        font-size: 12px;
+    }
+
+    h2 {
+        color:#629584;
+    }
+
+    h3, p {
+        color:#243642;
+    }
+
+    /* responsif section beranda */
+    .beranda-text {
+        font-size: 10px;
+        color: #E2F1E7;
+    }
+
+    .beranda-text p {
+        color: #E2F1E7;
+    }
+
+    /* responsif navigasi */
+    nav {
+        position: relative;
+        width: 100%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        background-color: transparent;
+        width: auto;
+        text-align: right;
+        z-index: 9;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+        position: relative;
+        right: 0;
+    }
+
+    /* responsif section sejarah */
+    #sejarah {
+        margin-top: 75px;
+        padding: 0;
+        max-height: 850px;
+    }
+
+    .sejarah-image {
+        width: 100%;
+        height: 45%;
+        border-radius: 0;
+    }
+
+    .sejarah-text {
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .sejarah-text h3 {
+        margin-top: 20px;
+    }
+
+    .sejarah-text h3, h2 {
+        text-align: center;
+    }
+
+    .sejarah-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sejarah .btn a {
+        background-color:#243642;
+        color: #E2F1E7;
+    }
+
+    #sejarah .btn a:hover {
+        background-color:#629584;
+    }
+
+    /* responsif section destinasi */
+    #destinasi {
+        margin-top: 0;
+    }
+
+    .destinasi-container h3{
+        margin-top: 40px;
+    }
+
+    .destinasi-item {
+        width: 40%; 
+        background-color:#629584;
+    }
+
+    .destinasi-content {
+        flex-wrap: nowrap;
+    }
+
+    .destinasi-info p {
+        color: #E2F1E7;
+    }
+
+    #destinasi .btn a {
+        background-color:#E2F1E7;
+        color:#243642;
+    }
+
+    #destinasi .btn a:hover {
+        background-color: #243642;
+        color: #E2F1E7;
+    }
+
+    .scroll-button {
+        padding: 10px; 
+    }
+
+    /* responsif section galeri*/
+    .galeri-container h3 {
+        padding-top: 57px;
+    }
+
+    .galeri-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .galeri-grid img:nth-last-child(2) {
+        grid-column: auto;
+    }
+
+    .galeri-grid img:nth-last-child(1) {
+        grid-column: -3 / -3; 
+    }
+
+    footer {
+        color: #243642;
+    }
+
+}
+
+@media (max-width: 450px) {
+    /* responsif header */
+    header h4 {
+        font-size: 10px;
+    }
+
+    /* responsif section beranda */
+    .beranda-text {
+        font-size: 6px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    /* responsif section destinasi */
+    .destinasi-container h3 {
+        margin-top: 35px;
+    }
+
+    .destinasi-item {
+        width: 75%; 
+    }
+
+    .destinasi-info h6 {
+        font-size: 1.1em;
+    }
+
+    .destinasi-info p {
+        font-size: 0.8em;
+    }
+
+    /* responsif section galeri */
+    .galeri-container h3 {
+        padding-top: 55px;
+    }
+
+    .galeri-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeri-grid img:nth-last-child(1) {
+        grid-column: auto; 
+    }
+
+    /* responsif section kontak */
+    .social-media ul li a i {
+        padding: 15px;
+    }
+}
+
+
